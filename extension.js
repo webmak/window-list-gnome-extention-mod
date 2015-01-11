@@ -1189,24 +1189,9 @@ function init() {
 			disable();
 	});
 }
-/*function enable() {
-    windowList = new WindowList();
-
-    windowList.actor.connect('notify::hover', Lang.bind(Main.messageTray,
-        function() {
-            this._pointerInTray = windowList.actor.hover;
-            this._updateState();
-        }));
-    injections['_trayDwellTimeout'] = MessageTray.MessageTray.prototype._trayDwellTimeout;
-    MessageTray.MessageTray.prototype._trayDwellTimeout = function() {
-        return false;
-    };
-
-    notificationParent = Main.messageTray._notificationWidget.get_parent();
-    Main.messageTray._notificationWidget.hide();
-    Main.messageTray._notificationWidget.reparent(windowList.actor);
-    Main.messageTray._notificationWidget.show();
-}*/
+function enable() {
+    init();
+}
 
 function disable() {
     var prop;
